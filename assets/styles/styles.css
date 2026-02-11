@@ -1,18 +1,48 @@
 /* GLOBAL - colors*/
 :root {
-  --white: #f2f1eb;
-  --pure-black: #000000;
-  --yellow: #ffbf00;
-  --cyan: #00ffd3;
-  --purple: #d300ff;
-  --yellow-BG: #fdf6ce;
-  --purple-BG: #ec93ff;
-  --cyan-BG: #79ffe8;
+    --white: #f2f1eb;
+    --pure-black: #000000;
+    --yellow: #ffbf00;
+    --cyan: #00ffd3;
+    --purple: #d300ff;
+    --yellow-BG: #fdf6ce;
+    --purple-BG: #ec93ff;
+    --cyan-BG: #79ffe8;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 /* Typography */
+body {
+    font-family: "Inclusive Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
+h1,
+h2 {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.highlight {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* add hr and sizes */
