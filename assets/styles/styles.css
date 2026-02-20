@@ -46,3 +46,88 @@ h6 {
 }
 
 /* add hr and sizes */
+
+/*-------- Wrap container -----*/
+.wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* wrap ends */
+
+/* layout basics ----------------------------*/
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+/*header ------------------*/
+.navbar {
+    background-color: var(--yellow-BG);
+    border-bottom: var(--pure-black) solid 1px;
+    position: sticky;
+    top: 0;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+.nav-list li {
+    float: left;
+}
+
+.primal-nav li {
+    border-right: 1px solid;
+    padding: 0 10px;
+
+}
+
+.nav-list li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--pure-black);
+    font-family: "Inclusive Sans", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+.nav-list li a:hover {}
+
+/* responsive ------------------------*/
+
+/* extra small */
+/* wide screen or desktop */
+@media screen and (min-width: 768px) {
+    body {
+        background-color: lightgreen;
+    }
+    .humburger-icon {
+        display: none;
+    }
+}
+
+/* tablets */
+/* placeholder color */
+@media screen and (max-width: 768px) {   
+     body {
+        background-color: lightgreen;
+    }
+    .primal-nav li:not(.humburger-icon) {
+        display: none;
+    }
+    .primal-nav li {
+        border: none;
+    }    
+    
+}
