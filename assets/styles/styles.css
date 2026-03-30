@@ -5,7 +5,7 @@
     --yellow: #ffbf00;
     --cyan: #00ffd3;
     --purple: #d300ff;
-    --yellow-BG: #fdf6ce;
+    --yellow-BG: #f8f1d8;
     --purple-BG: #ec93ff;
     --cyan-BG: #79ffe8;
 }
@@ -17,6 +17,7 @@ html {
 /* Typography */
 body {
     font-family: "Inclusive Sans", sans-serif;
+    background-color: var(--yellow-BG);
     font-weight: 400;
     font-style: normal;
 }
@@ -57,49 +58,68 @@ h6 {
 /* wrap ends */
 
 /* layout basics ----------------------------*/
-.right {
-    float: right;
+/* flexbox */
+.flex-con {
+    display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;  
 }
 
-.left {
-    float: left;
+.row {
+    flex-direction: row;
+}
+.column {
+    flex-direction: column;
+}
+.start {
+    justify-content: flex-start;
+}
+.end {
+    justify-content: flex-end;
+}
+.space-ard {
+    flex-direction: space-around;
+}
+.space-btw {
+    justify-content: space-between;
+}
+.space-around {
+    justify-content: space-around;
+}
+.space-enl {
+    justify-content: space-around;
 }
 
 /*header ------------------*/
+header div{
+    display: inline-block;
+    position: relative;
+}
+header div:first-child{
+    font-size: 3rem;
+    font-weight: bold;    
+}
+header div:nth-child(2) {
+    font-size: 1.2em;
+    vertical-align: super;
+    top: 5px;
+}
+/* navbar */
+
 .navbar {
-    background-color: var(--yellow-BG);
-    border-bottom: var(--pure-black) solid 1px;
-    position: sticky;
-    top: 0;
+    border-top: var(--pure-black) solid 1px;   
+    border-bottom: var(--pure-black) solid 1px;   
 }
 
-.nav-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-
-}
-
-.nav-list li {
-    float: left;
-}
-
-.primal-nav li {
-    border-right: 1px solid;
-    padding: 0 10px;
-
-}
-
-.nav-list li a {
-    display: block;
+.nav-list li a {    
     text-align: center;
     text-decoration: none;
     color: var(--pure-black);
     font-family: "Inclusive Sans", sans-serif;
     font-size: 20px;
-    text-transform: uppercase;
-    padding: 10px 0;
+    font-weight: bold;
+    padding-right: 10px;
 }
 
 .nav-list li a:hover {}
@@ -109,25 +129,14 @@ h6 {
 /* extra small */
 /* wide screen or desktop */
 @media screen and (min-width: 768px) {
-    body {
-        background-color: lightgreen;
-    }
-    .humburger-icon {
-        display: none;
-    }
+    
 }
 
 /* tablets */
 /* placeholder color */
-@media screen and (max-width: 768px) {   
-     body {
+@media screen and (max-width: 768px) {
+    body {
         background-color: lightgreen;
     }
-    .primal-nav li:not(.humburger-icon) {
-        display: none;
-    }
-    .primal-nav li {
-        border: none;
-    }    
     
 }
