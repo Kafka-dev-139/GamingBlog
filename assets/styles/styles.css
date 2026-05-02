@@ -8,10 +8,21 @@
     --yellow-BG: #f8f1d8;
     --purple-BG: #ec93ff;
     --cyan-BG: #79ffe8;
+    --gray: #333123;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+/* STYLES - overall - banner */
+.main-BG {
+background-color: var(--yellow);
+padding: 20px;
+}
+.main-BG-gray {
+   background-color: var(--gray);
+   padding: 20px; 
 }
 
 /* Typography */
@@ -23,10 +34,16 @@ body {
 }
 
 h1,
-h2 {
-    font-family: "Archivo Black", sans-serif;
-    font-weight: 400;
+h2,
+.main-heading,
+button {
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
     font-style: normal;
+}
+h2 {
+    font-size: 28px;
+    text-transform: uppercase;
 }
 
 h3,
@@ -40,13 +57,24 @@ h6 {
         "wdth" 100;
 }
 
+/* highlights and colors */
 .highlight {
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
     font-style: normal;
 }
+.bold {
+    font-weight: bold;
+}
 
 /* add hr and sizes */
+hr {
+    margin: 20px 0;
+    border: 3px solid var(--pure-black);
+}
+.title {
+    padding: 0 10px;
+}
 
 /*-------- Wrap container -----*/
 .wrap {
@@ -105,14 +133,39 @@ header div:nth-child(2) {
     vertical-align: super;
     top: 5px;
 }
-/* navbar */
 
-.navbar {
-    border-top: var(--pure-black) solid 1px;   
-    border-bottom: var(--pure-black) solid 1px;   
+/* MIX ------------------------- */
+/* ------- images */
+img {
+    background-color: #ffbf00;
+    max-width: 100%;
+  
+}
+/*button -------------------- */
+button {
+    background-color: var(--pure-black);
+    color: var(--yellow);
+    padding: 5px 30px;
+    border: none;
+    font-size: 22px;    
 }
 
-.nav-list li a {    
+/* section -----------------------*/
+.section {
+    margin-bottom: 25px;
+}
+p{
+    margin: 10px 0;
+}
+
+/* navbar -----------------------*/
+.nav-list {
+    border-top: var(--pure-black) solid 1px;   
+    border-bottom: var(--pure-black) solid 1px;
+    padding: 10px;    
+  
+}
+.nav-list li a {        
     text-align: center;
     text-decoration: none;
     color: var(--pure-black);
@@ -121,7 +174,6 @@ header div:nth-child(2) {
     font-weight: bold;
     padding-right: 10px;
 }
-
 .nav-list li a:hover {}
 
 /* responsive ------------------------*/
